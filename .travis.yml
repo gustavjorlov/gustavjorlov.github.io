@@ -2,7 +2,9 @@ language: ruby
 rvm:
 - 2.1
 # Assume bundler is being used, install step will run `bundle install`.
-script: jekyll build
+script: 
+ - jekyll build
+ - bundle exec htmlproof ./_site --only-4xx --check-favicon --check-html
 
 # branch whitelist
 branches:
