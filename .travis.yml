@@ -10,3 +10,4 @@ script:
 branches:
   only:
   - develop     # test the gh-pages branch
+  - master
