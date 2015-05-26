@@ -18,6 +18,20 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <ul class="post-list">
+    {% for post in site.projects %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <ul>
+    {% for cat in site.categories %}
+      <p>{{cat}}</p>
+    {% endfor %}
+  </ul>
 
 </div>
