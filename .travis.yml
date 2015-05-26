@@ -4,7 +4,7 @@ rvm:
 # Assume bundler is being used, install step will run `bundle install`.
 script: 
  - jekyll build
- - bundle exec htmlproof ./_site --only-4xx --check-favicon --check-html
+ - bundle exec htmlproof ./_site --only-4xx --ext --check-html --verbose=true
 
 # branch whitelist
 branches:
